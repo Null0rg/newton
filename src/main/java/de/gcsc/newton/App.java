@@ -1,4 +1,4 @@
-package edu.gcsc.newton;
+package de.gcsc.newton;
 
 public class App {
     public static void main(String[] args) {
