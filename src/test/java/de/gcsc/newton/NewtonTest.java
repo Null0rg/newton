@@ -20,12 +20,15 @@ public class NewtonTest {
             //
         }
 
-
+        createFindRootTest(x -> Math.sin(x) , x -> Math.cos(x), 1, 0);
+        createFindRootTest(x -> Math.sin(x) , x -> Math.cos(x), 2.8, Math.PI);
+        createFindRootTest(x -> Math.sin(x) , x -> Math.cos(x), 5.8, 2*Math.PI);
+        
     }
 
     public void createFindRootTest(Function f, Function df, double x0, double expected) {
         Newton newton = new Newton();
         
-        Assert.assertEquals(expected, newton.findRoot(f,df,1,1e-12), 1e-12);
+        Assert.assertEquals(expected, newton.findRoot(f,df,x0,1e-12), 1e-12);
     }
 }
