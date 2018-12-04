@@ -1,0 +1,10 @@
+sudo: false
+
+env:
+  - TERM=dumb
+
+language: java
+jdk:  openjdk11
+  
+script:
+    - ./gradlew test
