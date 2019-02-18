@@ -2,6 +2,9 @@ package de.gcsc.newton;
 
 public class Newton {
 
+    public double findRoot(Function f, Function df, double x, double tol) {
+        return findRoot(f, df, x, tol, 100);
+    }
 
     public double findRoot(Function f, Function df, double x, double tol, int maxIter) {
         double h = tol +1;
